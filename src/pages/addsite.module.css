@@ -1,0 +1,82 @@
+.inputboxcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.container{
+   
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    border-radius: 10px;
+}
+
+.inputcol{
+    background: rgb(174, 87, 255);
+    padding: 10px;
+
+}
+
+.input{
+    padding: 8px 15px;
+    border: 2px solid white;
+    font-size: 110%;
+    border-radius: 5px;
+    outline: grey;
+    margin: 10px;
+
+}
+
+.singleinp{
+    display: flex;
+    justify-content: center;
+    font-size: 110%;
+}
+
+.inputmain{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px black;
+    background-color: blueviolet;
+    /* width: 100%; */
+
+}
+
+.addsite{
+    font-size: 170%;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+.addpicture{
+    font-size: 130%;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(255, 143, 255);
+
+}
+
+.btn{
+    border-radius: 10px !important;
+    padding: 7px 20px !important;
+    margin: 10px;
+    margin-top: 30px;
+    background: rgb(255, 143, 255);
+}
+
+.label{
+    font-weight: 500;
+    font-size: 110% !important;
+    margin: 0;
+    margin-top: 10px;
+    color: rgb(229, 229, 229);
+}

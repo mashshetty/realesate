@@ -1,0 +1,132 @@
+.admin{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    color: rgba(0, 0, 0, 0.858);
+    border-radius: 10px;
+ 
+}
+
+.admiboxcontainer{
+    display: flex;
+    flex-direction: column;
+    background: rgb(193, 194, 255);
+    border-radius: 10px;
+    margin: 10px;
+    height: 65vh; 
+    justify-content: center;
+}
+
+.container{
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    background: white;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.adminBox{
+    
+    font-size: 115%;
+    color: white;
+    height: 160px;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 2px 8px black;
+    padding: 30px;
+    font-weight: 500;
+
+}
+
+.adminbox1{
+    background-image: linear-gradient(to right, rgb(41, 41, 182), rgb(89, 89, 231));
+    box-shadow: 1px 2px 8px rgb(0, 0, 107);
+}
+
+.adminbox2{
+    background-image: linear-gradient(to right, rgb(233, 51, 51), rgb(246, 118, 89));
+    box-shadow: 1px 2px 5px rgb(117, 0, 0);
+}
+.adminbox3{
+    background-image: linear-gradient(to right, rgb(246, 24, 212), rgb(234, 117, 228));
+    box-shadow: 1px 2px 5px rgb(130, 0, 110);
+}
+
+.adminIcons1{
+    color: rgb(50, 47, 223);
+    background: white;
+    padding: 4px 7px;
+    border-radius: 50%;
+}
+
+.adminIcons2{
+    color: rgb(219, 57, 57);
+    background: white;
+    padding: 4px 7px;
+    border-radius: 50%;
+}
+
+.adminIcons3{
+    color: rgb(236, 65, 219);
+    background: white;
+    padding: 4px 7px;
+    border-radius: 50%;
+}
+
+
+
+.dashboard{
+    position: relative;
+    height: 30vh;
+    background-color: rgb(174, 87, 255);
+    color: white;
+    display: flex;
+    align-items: left;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    flex-direction: column;
+}
+
+.dash{
+    font-size: 220%;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.dashx{
+  
+    font-size: 220%;
+    font-weight: 600;
+    color: rgba(119, 119, 119, 0.871);
+    margin-left: 20px;
+    
+}
+
+.hello{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 170%;
+    transform: translate(-50%,-50%);
+    color: rgb(249, 245, 255);
+    
+
+}
+
+
+
+
+
