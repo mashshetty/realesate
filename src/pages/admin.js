@@ -1,5 +1,4 @@
 import React from 'react'
-import AddSite from './addSite'
 import Link from 'next/link'
 import Styles from "./Admin.module.css";
 import AddLocationAltOutlinedIcon from '@mui/icons-material/AddLocationAltOutlined';
