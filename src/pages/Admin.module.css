@@ -136,6 +136,14 @@
     .dashx{
         font-size: 170%;
     }
+
+    .admiboxcontainer{
+        height: 75vh;
+    }
+
+    .dashboard{
+        height: 25vh;
+    }
   }
   
 
