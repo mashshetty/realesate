@@ -6,12 +6,12 @@ function Sites() {
     const posts = collection(db,"sites")
 
     useEffect(()=>{
-        const fn =async()=>{
-            const data = await getDocs(posts)
-            console.log("data is ",data.docs[0]._document.data.value.mapValue.fields)
-        }
+        // const fn =async()=>{
+        //     const data = await getDocs(posts)
+        //     console.log("data is ",data.docs[0]._document.data.value.mapValue.fields)
+        // }
 
-        fn()
+        // fn()
     },[])
   return (
     <div>Sites</div>

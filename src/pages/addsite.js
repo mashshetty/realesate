@@ -28,6 +28,23 @@ function AddSite() {
 
   const add = async () => {
     await addDoc(posts, site);
+    addSite({
+      area: "",
+      contact: 0,
+      description: "",
+      district: "",
+      pic1: "",
+      pic2: "",
+      pic3: "",
+      pic4: "",
+      pic5: "",
+      pic6: "",
+      pic7: "",
+      price: "",
+      sqft: "",
+      state: "",
+      thaluk: "",
+    })
   };
 
   const onDataChange = (e) => {
@@ -64,7 +81,8 @@ function AddSite() {
               className={Styles.input}
               type="text"
               label="Area"
-              name="Area"
+              name="area"
+              value={site.area}
               onChange={(e) => onDataChange(e)}
               required
             />
@@ -79,6 +97,7 @@ function AddSite() {
               onChange={(e) => onDataChange(e)}
               required
               label="Thaluk"
+              value={site.thaluk}
             />
             </div>
           </div>
@@ -90,6 +109,7 @@ function AddSite() {
               name="state"
               onChange={(e) => onDataChange(e)}
               required
+              value={site.state}
               label="State"
             /></div>
 
@@ -99,6 +119,7 @@ function AddSite() {
               className={Styles.input}
               type="text"
               name="sqft"
+              value={site.sqft}
               onChange={(e) => onDataChange(e)}
               required
               label="SqFt"
@@ -112,6 +133,7 @@ function AddSite() {
               className={Styles.input}
               type="text"
               name="price"
+              value={site.price}
               onChange={(e) => onDataChange(e)}
               required
               label="price"
@@ -124,6 +146,7 @@ function AddSite() {
               className={Styles.input}
               type="text"
               name="contact"
+              value={site.contact}
               onChange={(e) => onDataChange(e)}
               required
               label="Contact No"
@@ -139,6 +162,7 @@ function AddSite() {
               name="description"
               id=""
               cols="30"
+              value={site.description}
               rows="3"
             ></textarea>
             </div>
