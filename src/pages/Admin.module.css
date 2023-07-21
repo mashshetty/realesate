@@ -126,6 +126,19 @@
 
 }
 
+@media only screen and (max-width: 600px) {
+    .adminBox{
+        height: 100px;
+        margin-bottom: 20px;
+
+    }
+
+    .dashx{
+        font-size: 170%;
+    }
+  }
+  
+
 
 
 

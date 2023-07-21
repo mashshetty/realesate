@@ -30,6 +30,8 @@
     border-radius: 5px;
     outline: grey;
     margin: 10px;
+    width: 250px;
+    background: white;
 
 }
 
@@ -80,3 +82,13 @@
     margin-top: 10px;
     color: rgb(229, 229, 229);
 }
+@media only screen and (max-width: 600px) {
+   .addsite{
+    font-size: 140%;
+   }
+
+   .addpicture{
+    font-size: 110%;
+   }
+  }
+  
