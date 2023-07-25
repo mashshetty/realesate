@@ -24,7 +24,10 @@ box-shadow: 2px 2px 17px -5px black;
 }
 
 .heading{
-    font-size: 150%;
+    font-size: 140%;
+    margin-bottom: 20px;
+}
+.nav{
     margin-bottom: 20px;
 }
 
@@ -36,10 +39,12 @@ box-shadow: 2px 2px 17px -5px black;
 
 .rightsite{
     flex: 70%;
-    background: rgb(248, 231, 246);
+    background: rgb(255 245 254);
     padding: 10px;
+    font-size: 90%;
 }
 
 .residential{
     font-weight: 600;
 }
+

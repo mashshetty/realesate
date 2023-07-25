@@ -6,11 +6,14 @@ import Styles from "./sites.module.css";
 function Sites() {
   const posts = collection(db, "sites");
   const [sites, setSites] = useState([]);
+  const [loading,setLoading]=useState(false)
 
   useEffect(() => {
     const fn = async () => {
+      setLoading(true)
       const data = await getDocs(posts);
       setSites(data.docs.map((doc) => ({ ...doc.data() })));
+      setLoading(false)
     };
 
     fn();
@@ -18,10 +21,11 @@ function Sites() {
   console.log("data is ", sites);
   return (
     <div>
-      <p>Home / Udupi / karkala / Plot for sale</p>
+      <p className={Styles.nav}>Home / Udupi / karkala / Plot for sale</p>
       <h1 className={Styles.heading}>
         search results {sites.length} | Land for sale in karkala, udupi
       </h1>
+      {loading && <div className={Styles.loading}>Loading..</div> }
       {sites.map((site, index) => {
         return (
           <div className={Styles.mainsitecontainer}>
