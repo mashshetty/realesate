@@ -15,16 +15,33 @@ cursor: pointer;
 box-shadow: 2px 2px 17px -12px black;
 }
 
-.price{
-    font-size: 150%;
-    /* background: gold;
-    display: block;
-    box-sizing: content-box; */
+.search{
+    padding: 7px 20px;
+    margin-bottom: 20px;
+    border: 2px solid grey;
 }
 
-.priceicn{
-    margin-bottom: -6px;
+.searchbtn{
+    padding: 9px 20px;
+    border: none;
+    color: rgb(14, 14, 14);
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-weight: 600;
+    background: mediumspringgreen;
+    
 }
+
+.searchbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
 
 .sitescontainer{
     display: flex;
@@ -75,3 +92,9 @@ padding: 4px 10px;
 border-radius: 35px;
  background-color: #c7e5ff;;
 }
+
+.priceicn{
+    margin-bottom: -2px;
+    font-size: 100% !important;
+}
+

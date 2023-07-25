@@ -11,6 +11,10 @@ function Sites(props) {
       <h1 className={Styles.heading}>
         search results {sites?.length} | Land for sale in karkala, udupi
       </h1>
+      <div className={Styles.searchbox}>
+        <input placeholder="search here"  className={Styles.search} type="search" /> <input className={Styles.searchbtn} type="button" value="search" />
+      </div>
+
       {sites?.map((site, index) => {
         return (
           <div key={index} className={Styles.mainsitecontainer}>
