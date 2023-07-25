@@ -8,7 +8,7 @@ margin-bottom: 30px;
 justify-content: center;
 padding: 10px;
 align-items: center;
-box-shadow: 2px 2px 17px -5px black;
+box-shadow: 2px 2px 17px -12px black;
 }
 
 .sitescontainer{
@@ -29,6 +29,7 @@ box-shadow: 2px 2px 17px -5px black;
 }
 .nav{
     margin-bottom: 20px;
+    color: grey;
 }
 
 
@@ -39,9 +40,14 @@ box-shadow: 2px 2px 17px -5px black;
 
 .rightsite{
     flex: 70%;
-    background: rgb(255 245 254);
-    padding: 10px;
-    font-size: 90%;
+    background: rgb(246 246 246);
+    padding: 8px;
+    font-size: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    flex-direction: column;
+    
 }
 
 .residential{
