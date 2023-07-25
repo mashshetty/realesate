@@ -17,6 +17,7 @@
     background: rgb(193, 194, 255);
     border-radius: 10px;
     margin: 10px;
+    padding: 10px;
     height: 65vh; 
     justify-content: center;
 }
@@ -143,6 +144,10 @@
 
     .dashboard{
         height: 25vh;
+    }
+
+    .hello{
+        font-size: 140%;
     }
   }
   

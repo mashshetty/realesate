@@ -70,10 +70,24 @@
 
 .btn{
     border-radius: 10px !important;
-    padding: 7px 20px !important;
-    margin: 10px;
-    margin-top: 30px;
-    background: rgb(255, 143, 255);
+    padding: 7px 30px !important;
+    margin: 10px !important;
+    margin-top: 30px !important;
+    background: rgb(255, 75, 255) !important;
+}
+
+.btn:hover{
+    background: rgb(251, 28, 251) !important;
+}
+
+.errormsg{
+    color: rgb(86 0 0);
+}
+
+.errormsgx{
+    color: rgb(86 0 0);
+    margin-top: 5px;
+
 }
 
 .label{
@@ -82,6 +96,15 @@
     margin: 0;
     margin-top: 10px;
     color: rgb(229, 229, 229);
+}
+
+.labelx{
+    font-weight: 500;
+    font-size: 110% !important;
+    margin: 0;
+    margin-top: 10px;
+    color: rgb(229, 229, 229);
+    margin-bottom: 5px;
 }
 @media only screen and (max-width: 600px) {
    .addsite{
