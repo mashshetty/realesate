@@ -1,10 +1,10 @@
 import React from 'react'
 import Sites from './Sites'
 
-function HomePage() {
+function HomePage(props) {
   return (
     <>
-    <Sites/>
+    <Sites sites={props.sites}/>
     </>
   )
 }

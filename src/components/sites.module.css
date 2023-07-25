@@ -42,6 +42,7 @@ box-shadow: 2px 2px 17px -12px black;
     flex: 70%;
     background: rgb(246 246 246);
     padding: 8px;
+    color: black;
     font-size: 80%;
     display: flex;
     justify-content: space-evenly;

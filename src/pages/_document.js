@@ -5,8 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta httpEquiv="Content-Language" content="en" />
-        <title>we find land for you</title>
-        <meta name="description" content="site for sale in karkala" />
+        <meta name="description" content="land for sale in karkala udupi" />
       </Head>
       <body>
         <Main />

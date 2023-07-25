@@ -4,11 +4,11 @@ import { Inter } from "next/font/google";
 import HomePage from "@/components/home-page";
 import styles from "@/styles/Home.module.css";
 import { useEffect, useState } from "react";
-// import { userAgent } from "next/server";
+import getData from "@/components/getDoc";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home({data}) {
   const [mob,setMob]=useState(true)
   useEffect(() => {
    const findDevice =()=>{
@@ -48,9 +48,15 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div >
-        {mob? <HomePage/>:<></>}
+        {mob? <HomePage sites={data}/>:<></>}
         </div>
       </main>
     </>
   );
+}
+
+
+export async function getServerSideProps(){
+  const data = await getData();
+  return { props: { data:data }};
 }
