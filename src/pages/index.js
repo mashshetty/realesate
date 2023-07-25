@@ -3,10 +3,35 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import HomePage from "@/components/home-page";
 import styles from "@/styles/Home.module.css";
+import { useEffect, useState } from "react";
+// import { userAgent } from "next/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [mob,setMob]=useState(true)
+  useEffect(() => {
+   const findDevice =()=>{
+    const userAgent = window.navigator === "undefined"?"":navigator.userAgent;
+    const mobile = Boolean(
+      userAgent.match(
+        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+      )
+    );
+
+    if(mobile){
+      return true;
+    }else{
+      return false;
+    }
+   }
+
+   findDevice()
+   setMob(findDevice())
+   localStorage.setItem("isMobile",findDevice())
+
+  }, [])
+  
   return (
     <>
       <Head>
@@ -23,7 +48,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div >
-          <HomePage />
+        {mob? <HomePage/>:<></>}
         </div>
       </main>
     </>

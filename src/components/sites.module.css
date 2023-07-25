@@ -1,0 +1,23 @@
+.img{
+    height: 100px;
+    width:100px;
+    cursor: pointer;
+}
+
+.heading{
+    font-size: 150%;
+}
+
+.sitescontainer{
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.leftsite{
+    flex: 30%;
+}
+
+.rightsite{
+    flex: 70%;
+}
