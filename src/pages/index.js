@@ -48,7 +48,7 @@ export default function Home({data}) {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div >
-        {mob? <HomePage sites={data}/>:<></>}
+        {mob? <HomePage sites={data}/>:<HomePage sites={data}/>}
         </div>
       </main>
     </>

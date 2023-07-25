@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Styles from "./sites.module.css";
-import getData from "./getDoc"
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 
 function Sites(props) {
   const [sites, setSites] = useState(props.sites);
@@ -24,7 +24,7 @@ function Sites(props) {
             </div>
             <div className={Styles.rightsite}>
               <div>
-                <h3>price {site.price}</h3>
+                <h3 className={Styles.price}> <CurrencyRupeeIcon fontSize="small" className={Styles.priceicn}/> {site.price}</h3>
               </div>
               <div>
                 {" "}
@@ -33,7 +33,7 @@ function Sites(props) {
                 </span>{" "}
                 for sale in {site.area}, {site.thaluk}, {site.state}
               </div>
-              <div>Plot Area : {site.sqft} sqft</div>
+              <div>Plot Area : <strong> {site.sqft} </strong> sqft</div>
             </div>
           </div>
         <p>  {site.description}</p>

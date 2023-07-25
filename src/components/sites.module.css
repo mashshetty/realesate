@@ -1,6 +1,7 @@
 
 
 .mainsitecontainer{
+
  display: flex;
 flex-direction: column;
 background: white;
@@ -8,7 +9,21 @@ margin-bottom: 30px;
 justify-content: center;
 padding: 10px;
 align-items: center;
+font-size: 80%;
+color: grey;
+cursor: pointer;
 box-shadow: 2px 2px 17px -12px black;
+}
+
+.price{
+    font-size: 150%;
+    background: gold;
+    display: block;
+    box-sizing: content-box;
+}
+
+.priceicn{
+    margin-bottom: -6px;
 }
 
 .sitescontainer{
