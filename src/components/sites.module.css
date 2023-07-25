@@ -1,3 +1,22 @@
+
+
+.mainsitecontainer{
+ display: flex;
+flex-direction: column;
+background: white;
+margin-bottom: 30px;
+justify-content: center;
+padding: 10px;
+align-items: center;
+box-shadow: 2px 2px 17px -5px black;
+}
+
+.sitescontainer{
+    display: flex;
+    width: 100%;
+    background: white;
+
+}
 .img{
     height: 100px;
     width:100px;
@@ -6,13 +25,10 @@
 
 .heading{
     font-size: 150%;
+    margin-bottom: 20px;
 }
 
-.sitescontainer{
-    display: flex;
-    width: 100%;
-    margin-bottom: 30px;
-}
+
 
 .leftsite{
     flex: 30%;
@@ -20,4 +36,10 @@
 
 .rightsite{
     flex: 70%;
+    background: rgb(248, 231, 246);
+    padding: 10px;
+}
+
+.residential{
+    font-weight: 600;
 }
