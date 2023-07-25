@@ -24,7 +24,7 @@ function Sites(props) {
             </div>
             <div className={Styles.rightsite}>
               <div>
-                <h3 className={Styles.price}> <CurrencyRupeeIcon fontSize="small" className={Styles.priceicn}/> {site.price}</h3>
+                <h3 className={Styles.price}> <span className={Styles.pricebox}><CurrencyRupeeIcon fontSize="small" className={Styles.priceicn}/> {site.price}</span> </h3>
               </div>
               <div>
                 {" "}

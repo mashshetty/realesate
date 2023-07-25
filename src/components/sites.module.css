@@ -17,9 +17,9 @@ box-shadow: 2px 2px 17px -12px black;
 
 .price{
     font-size: 150%;
-    background: gold;
+    /* background: gold;
     display: block;
-    box-sizing: content-box;
+    box-sizing: content-box; */
 }
 
 .priceicn{
@@ -70,3 +70,8 @@ box-shadow: 2px 2px 17px -12px black;
     font-weight: 600;
 }
 
+.pricebox{
+padding: 4px 10px;
+border-radius: 35px;
+ background-color: #c7e5ff;;
+}
