@@ -9,6 +9,7 @@
 
 .container{
     margin: 10px;
+    background-color: #f6f6f6;
 }
 
 
@@ -29,5 +30,24 @@ font-size: 120%;
 background: rgb(240, 240, 240);
 margin: 5px;
 
+
+}
+
+
+.priceandsqft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.price, .area{
+    padding: 20px;
+    background: #ececec;
+    margin: 10px;
+    flex: 50%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    
 
 }
