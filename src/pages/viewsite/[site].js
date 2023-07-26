@@ -1,13 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import { db } from "@/firebase-config";
 import { doc, getDoc } from "firebase/firestore";
 import Styles from "../../components/slug.module.css";
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import ShareIcon from '@mui/icons-material/Share';
 
 const DynamicPage = ({ data }) => {
+
   const [selSite, setSite] = useState(data);
+
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        // Use the Web Share API if available
+        await navigator.share({
+          title: "Website Title",
+          text: "Check out this awesome website!",
+          url: window.location.href,
+        });
+      } else {
+        // Fallback for browsers that do not support the Web Share API
+        // You can implement your custom sharing functionality here
+        alert("Sharing is not supported in this browser.");
+      }
+    } catch (error) {
+      console.error("Error sharing:", error);
+    }
+  };
 
   useEffect(() => {
     setSite(data);
@@ -66,6 +86,8 @@ const DynamicPage = ({ data }) => {
        <div  className={Styles.contactbox}><a  href={`tel:${selSite.contact}`}> <span className={Styles.contact}>Call <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 
        <div className={Styles.contactboxx} ><a  href="https://wa.me/+919741104490"> <span className={Styles.contactx}>whatsapp <WhatsAppIcon className={Styles.callicnx} fontSize="small"/> </span> </a></div> 
       </div>
+      <span className={Styles.share} onClick={handleShare} ><ShareIcon/> </span>
+
     </div>
   );
 };
