@@ -1,4 +1,6 @@
 .main {
+    background-color: #f6f6f6;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
