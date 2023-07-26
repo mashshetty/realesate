@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { db } from "@/firebase-config";
 import { doc, getDoc } from "firebase/firestore";
+import Head from "next/head";
 import Styles from "../../components/slug.module.css";
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import ShareIcon from '@mui/icons-material/Share';
+
 
 const DynamicPage = ({ data }) => {
 
@@ -13,15 +15,12 @@ const DynamicPage = ({ data }) => {
   const handleShare = async () => {
     try {
       if (navigator.share) {
-        // Use the Web Share API if available
         await navigator.share({
           title: "Website Title",
-          text: "Check out this awesome website!",
+          text: "Check out this awesome site!",
           url: window.location.href,
         });
       } else {
-        // Fallback for browsers that do not support the Web Share API
-        // You can implement your custom sharing functionality here
         alert("Sharing is not supported in this browser.");
       }
     } catch (error) {
@@ -34,6 +33,15 @@ const DynamicPage = ({ data }) => {
   }, [data]);
   return (
     <div className={Styles.container}>
+      <Head>
+        <title>view site</title>
+        <meta httpEquiv="Content-Language" content="en" />
+        <meta name="keywords" content="site for sale, site for sale in karkala, site for sale in udupi, site for sale in manglore, land for sale, plot for sale" />
+        <meta name="description" content={`Residential site / land for sale in ${selSite.area}
+          ${selSite.area && ","} ${selSite.thaluk} ${selSite.thaluk && ","}
+          ${selSite.destrict} ${selSite.destrict && ","} ${selSite.state}`} />
+
+      </Head>
       <div>
         <p className={Styles.nav}>
           {" "}
@@ -45,8 +53,8 @@ const DynamicPage = ({ data }) => {
       <div>
         <h2 className={Styles.heading}>
           Residential site / land for sale in {selSite.area}{" "}
-          {selSite.area && ","} {selSite.thaluk} {selSite.thaluk && ","}{" "}
-          {selSite.destrict} {selSite.destrict && ","} {selSite.state}{" "}
+          {selSite.area && ","} {selSite.thaluk} {selSite.thaluk && ","}
+          {selSite.destrict} {selSite.destrict && ","} {selSite.state}
         </h2>
       </div>
       <h3 className={Styles.propertyinfox}>Property Pictures</h3>

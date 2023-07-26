@@ -11,15 +11,13 @@ function Sites(props) {
   const handleShare = async () => {
     try {
       if (navigator.share) {
-        // Use the Web Share API if available
         await navigator.share({
           title: "Website Title",
-          text: "Check out this awesome website!",
+          text: "Check out this awesome site!",
           url: window.location.href,
         });
       } else {
-        // Fallback for browsers that do not support the Web Share API
-        // You can implement your custom sharing functionality here
+
         alert("Sharing is not supported in this browser.");
       }
     } catch (error) {
