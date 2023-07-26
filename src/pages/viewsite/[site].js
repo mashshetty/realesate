@@ -4,6 +4,7 @@ import { db } from "@/firebase-config";
 import { doc, getDoc } from "firebase/firestore";
 import Styles from "../../components/slug.module.css";
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const DynamicPage = ({ data }) => {
   const [selSite, setSite] = useState(data);
@@ -60,8 +61,8 @@ const DynamicPage = ({ data }) => {
         </div>
       )}
       <div className={Styles.contactholder}>
-       <div ><a  href={`tel:${selSite.contact}`}> <span className={Styles.contact}>Call <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 
-       <div ><a  href="https://wa.me/+919741104490"> <span className={Styles.contact}>whatsapp <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 
+       <div  className={Styles.contactbox}><a  href={`tel:${selSite.contact}`}> <span className={Styles.contact}>Call <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 
+       <div className={Styles.contactboxx} ><a  href="https://wa.me/+919741104490"> <span className={Styles.contactx}>whatsapp <WhatsAppIcon className={Styles.callicnx} fontSize="small"/> </span> </a></div> 
       </div>
     </div>
   );

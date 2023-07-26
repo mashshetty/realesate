@@ -34,14 +34,7 @@ border-radius: 10px;
 
 }
 
-.contact{
-    padding: 8px 15px;
-    background-color: #ff4a9e;
-    color: white;
-    margin: 5px;
-    font-size: 120%;
-    border-radius: 10px;
-}
+
 
 .contactholder{
     margin-top: 20px;
@@ -87,4 +80,49 @@ border-radius: 10px;
 .callicn{
     position: relative;
     top: 3px;
+}
+
+.callicnx{
+    position: relative;
+    top: 4px;
+}
+
+/* .contact{
+    padding: 8px 15px;
+    background-color: #0078db;
+    color: white;
+    margin: 5px;
+    font-size: 120%;
+    border-radius: 10px;
+}
+
+.contactx{
+    padding: 8px 15px;
+    background-color: #25d366;;
+    color: white;
+    margin: 5px;
+    font-size: 120%;
+    border-radius: 10px;
+} */
+
+.contactboxx{
+    flex: 50%;
+    color: white;
+    background-color: #25d366;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.contactbox{
+    flex: 50%;
+    color: white;
+    margin: 5px;
+    background-color: #0078db;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px 15px;
 }
