@@ -102,4 +102,46 @@ border-radius: 35px;
     font-size: 100% !important;
 }
 
+.contactholder{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
+.contactboxx{
+    flex: 50%;
+    color: white;
+    background-color: #25d366;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    height: 50px;
+    align-items: center;
+}
+
+.contactbox{
+    flex: 50%;
+    color: white;
+    margin: 5px;
+    background-color: #0078db;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    height: 50px;
+    align-items: center;
+}
+
+.callicn{
+    position: relative;
+    top: 3px;
+}
+
+.callicnx{
+    position: relative;
+    top: 6px;
+}
