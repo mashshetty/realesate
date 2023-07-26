@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { db } from "@/firebase-config";
 import { doc, getDoc } from "firebase/firestore";
 import Styles from "../../components/slug.module.css";
+import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 
 const DynamicPage = ({ data }) => {
   const [selSite, setSite] = useState(data);
@@ -46,17 +47,18 @@ const DynamicPage = ({ data }) => {
           <img className={Styles.siteimg} src={selSite.pic6} alt="image1" />
         )}
       </div>
+      <h3 className={Styles.propertyinfo}>Property Information</h3>
       <div className={Styles.priceandsqft}>
-        <div className={Styles.price}>Price : <strong> {selSite.price}</strong> </div>
-        <div className={Styles.area}>Plot : <strong> {selSite.sqft} sqft</strong> </div>
+        <div className={Styles.price}> <strong> {selSite.price}</strong> <span className={Styles.ps}>Price</span> </div>
+        <div className={Styles.area}> <strong> {selSite.sqft} sq.ft</strong> <span className={Styles.ps}>Size</span>  </div>
       </div>
       {selSite.description && (
         <div>
           <p className={Styles.desc}>{selSite.description}</p>
         </div>
       )}
-      <div>
-        <p className={Styles.contact}>Contact Details : {selSite.contact}</p>
+      <div className={Styles.contactholder}>
+       <div ><a  href="tel:{{selSite.contact}}"> <span className={Styles.contact}>Call <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 
       </div>
     </div>
   );

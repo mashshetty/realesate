@@ -24,13 +24,26 @@
 }
 
 
-.desc, .contact{
+.desc{
 padding: 10px;
 font-size: 120%;
 background: rgb(240, 240, 240);
 margin: 5px;
 
 
+}
+
+.contact{
+    padding: 8px 15px;
+    background-color: #ff4a9e;
+    color: white;
+    margin: 5px;
+    font-size: 120%;
+    border-radius: 10px;
+}
+
+.contactholder{
+    margin-top: 20px;
 }
 
 
@@ -42,7 +55,8 @@ margin: 5px;
 }
 .price, .area{
     padding: 20px;
-    background: #ececec;
+    /* background: #ececec; */
+    background-color: mediumspringgreen;
     margin: 10px;
     flex: 50%;
     border-radius: 10px;
@@ -50,4 +64,18 @@ margin: 5px;
     justify-content: center;
     
 
+}
+
+.ps{
+    margin-left: 5px;
+}
+
+.propertyinfo{
+    margin-left: 12px;
+    margin-bottom: 5px;
+}
+
+.callicn{
+    position: relative;
+    top: 3px;
 }
