@@ -7,7 +7,7 @@ function Sites(props) {
   const [sites, setSites] = useState(props.sites);
   
   return (
-    <div>
+    <div className={Styles.topcontainer}>
       <p className={Styles.nav}>Home / Udupi / karkala / Site for sale</p>
       <h1 className={Styles.heading}>
         search results {sites?.length} | Land for sale in karkala, udupi
