@@ -1,0 +1,33 @@
+.siteimg{
+    width: 90vw;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    margin-inline: auto;
+    
+}
+
+.container{
+    margin: 10px;
+}
+
+
+.nav{
+    color: grey;
+    margin-bottom: 20px;
+}
+
+.heading{
+    font-size: 140%;
+    margin-bottom: 20px;
+}
+
+
+.desc, .contact{
+padding: 10px;
+font-size: 120%;
+background: rgb(240, 240, 240);
+margin: 5px;
+
+
+}

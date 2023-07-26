@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Styles from "./sites.module.css";
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+import Link from "next/link";
 
 function Sites(props) {
   const [sites, setSites] = useState(props.sites);
@@ -17,7 +18,7 @@ function Sites(props) {
 
       {sites?.map((site, index) => {
         return (
-          <div key={index} className={Styles.mainsitecontainer}>
+        <Link href={`/viewsite/${site.id}`} key={index}>  <div  className={Styles.mainsitecontainer}>
             <div className={Styles.sitescontainer} >
             <div className={Styles.leftsite}>
               <img
@@ -42,7 +43,7 @@ function Sites(props) {
           </div>
         <p>  {site.description}</p>
         <p>Contact : {site.contact}</p>
-          </div>
+          </div></Link>
         );
       })}
     </div>

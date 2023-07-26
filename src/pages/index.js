@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import HomePage from "@/components/home-page";
 import styles from "@/styles/Home.module.css";
@@ -35,7 +34,7 @@ export default function Home({data}) {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>site for sale in karkala and udupi</title>
         <meta name="description" content="land for sale in udupi and karkala" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
