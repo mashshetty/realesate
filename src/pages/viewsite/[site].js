@@ -51,15 +51,17 @@ const DynamicPage = ({ data }) => {
         )}
       </div>
       <h3 className={Styles.propertyinfo}>Property Information</h3>
-      <div className={Styles.priceandsqft}>
-        <div className={Styles.price}> <strong> {selSite.price}</strong> <span className={Styles.ps}>Price</span> </div>
-        <div className={Styles.area}> <strong> {selSite.sqft} sq.ft</strong> <span className={Styles.ps}>Size</span>  </div>
-      </div>
       {selSite.description && (
         <div>
           <p className={Styles.desc}>{selSite.description}</p>
         </div>
       )}
+      <div className={Styles.priceandsqft}>
+        <div className={Styles.price}> <strong> {selSite.price}</strong> <span className={Styles.ps}>Price</span> </div>
+        <div className={Styles.area}> <strong> {selSite.sqft} sq.ft</strong> <span className={Styles.ps}>Size</span>  </div>
+      </div>
+      
+      <h3 className={Styles.propertyinfo}>Reach Us</h3>
       <div className={Styles.contactholder}>
        <div  className={Styles.contactbox}><a  href={`tel:${selSite.contact}`}> <span className={Styles.contact}>Call <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 
        <div className={Styles.contactboxx} ><a  href="https://wa.me/+919741104490"> <span className={Styles.contactx}>whatsapp <WhatsAppIcon className={Styles.callicnx} fontSize="small"/> </span> </a></div> 

@@ -1,6 +1,7 @@
 .siteimg{
     width: 90vw;
     height: auto;
+    max-height: 100vh;
     display: block;
     margin-bottom: 20px;
     margin-inline: auto;
@@ -37,7 +38,7 @@ border-radius: 10px;
 
 
 .contactholder{
-    margin-top: 15px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,6 +51,7 @@ border-radius: 10px;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-bottom: 10px;
 }
 .price, .area{
     padding: 10px;

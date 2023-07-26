@@ -7,6 +7,24 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 function Sites(props) {
   const [sites, setSites] = useState(props.sites);
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        // Use the Web Share API if available
+        await navigator.share({
+          title: "Website Title",
+          text: "Check out this awesome website!",
+          url: window.location.href,
+        });
+      } else {
+        // Fallback for browsers that do not support the Web Share API
+        // You can implement your custom sharing functionality here
+        alert("Sharing is not supported in this browser.");
+      }
+    } catch (error) {
+      console.error("Error sharing:", error);
+    }
+  };
 
   return (
     <div className={Styles.topcontainer}>
@@ -72,6 +90,9 @@ function Sites(props) {
                 <div className={Styles.contactholder}>
        <div  className={Styles.contactbox}><a  href={`tel:${site.contact}`}> <span className={Styles.contact}>Call <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 
        <div className={Styles.contactboxx} ><a  href="https://wa.me/+919741104490"> <span className={Styles.contactx}>whatsapp <WhatsAppIcon className={Styles.callicnx} fontSize="small"/> </span> </a></div> 
+      </div>
+      <div>
+        <button onClick={handleShare} type="button">share</button>
       </div>
               </div>
            
