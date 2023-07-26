@@ -37,10 +37,11 @@ border-radius: 10px;
 
 
 .contactholder{
-    margin-top: 20px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 
@@ -51,14 +52,16 @@ border-radius: 10px;
     width: 100%;
 }
 .price, .area{
-    padding: 20px;
+    padding: 10px;
     /* background: #ececec; */
     background-color: mediumspringgreen;
     margin: 10px;
     flex: 50%;
     border-radius: 10px;
     display: flex;
+    height: 50px;
     justify-content: center;
+    align-items: center;
     font-size: 80%;
     
 
@@ -84,26 +87,10 @@ border-radius: 10px;
 
 .callicnx{
     position: relative;
-    top: 4px;
+    top: 6px;
 }
 
-/* .contact{
-    padding: 8px 15px;
-    background-color: #0078db;
-    color: white;
-    margin: 5px;
-    font-size: 120%;
-    border-radius: 10px;
-}
 
-.contactx{
-    padding: 8px 15px;
-    background-color: #25d366;;
-    color: white;
-    margin: 5px;
-    font-size: 120%;
-    border-radius: 10px;
-} */
 
 .contactboxx{
     flex: 50%;
@@ -113,7 +100,7 @@ border-radius: 10px;
     display: flex;
     justify-content: center;
     border-radius: 10px;
-    padding: 10px 15px;
+    padding: 14px 15px;
 }
 
 .contactbox{
@@ -124,5 +111,7 @@ border-radius: 10px;
     display: flex;
     justify-content: center;
     border-radius: 10px;
-    padding: 10px 15px;
+    padding: 10px;
+    height: 50px;
+    align-items: center;
 }
