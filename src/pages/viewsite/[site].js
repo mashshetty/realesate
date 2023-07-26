@@ -48,7 +48,7 @@ const DynamicPage = ({ data }) => {
       </div>
       <div className={Styles.priceandsqft}>
         <div className={Styles.price}>Price : <strong> {selSite.price}</strong> </div>
-        <div className={Styles.area}>Plot area : <strong> {selSite.sqft}</strong> </div>
+        <div className={Styles.area}>Plot : <strong> {selSite.sqft} sqft</strong> </div>
       </div>
       {selSite.description && (
         <div>
