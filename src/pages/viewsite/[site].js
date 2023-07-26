@@ -61,6 +61,7 @@ const DynamicPage = ({ data }) => {
       )}
       <div className={Styles.contactholder}>
        <div ><a  href={`tel:${selSite.contact}`}> <span className={Styles.contact}>Call <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 
+       <div ><a  href="https://wa.me/+919741104490"> <span className={Styles.contact}>whatsapp <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 
       </div>
     </div>
   );
