@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Styles from "./sites.module.css";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import Link from "next/link";
+import Head from "next/head";
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import ShareIcon from '@mui/icons-material/Share';
@@ -27,6 +28,11 @@ function Sites(props) {
 
   return (
     <div className={Styles.topcontainer}>
+      <Head>
+        <title>Buy land, site, or house in Karakala, Udupi & Mangalore</title>
+        <meta httpEquiv="Content-Language" content="en" />
+        <meta name="description" content="Find the incomparable pricing on the land, site, house, or property of your dreams. We save you money by locating the ideal house. Check out the amazing bargains right away."/>
+      </Head>
       <p className={Styles.nav}>Home / Udupi / karkala / Site for sale</p>
       <h1 className={Styles.heading}>
         search results {sites?.length} | Land for sale in karkala, udupi

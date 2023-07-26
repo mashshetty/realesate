@@ -34,12 +34,9 @@ const DynamicPage = ({ data }) => {
   return (
     <div className={Styles.container}>
       <Head>
-        <title>view site</title>
+        <title>view site for sale in karkala, udupi and mangalore</title>
         <meta httpEquiv="Content-Language" content="en" />
-        <meta name="keywords" content="site for sale, site for sale in karkala, site for sale in udupi, site for sale in manglore, land for sale, plot for sale" />
-        <meta name="description" content={`Residential site / land for sale in ${selSite.area}
-          ${selSite.area && ","} ${selSite.thaluk} ${selSite.thaluk && ","}
-          ${selSite.destrict} ${selSite.destrict && ","} ${selSite.state}`} />
+        <meta name="description" content={`Residential site / land for sale in ${selSite.area}${selSite.area && ","} ${selSite.thaluk} ${selSite.thaluk && ","}${selSite.district} ${selSite.district && ","} ${selSite.state}`} />
 
       </Head>
       <div>
