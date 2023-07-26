@@ -20,6 +20,7 @@ const DynamicPage = ({ data }) => {
           for sale{" "}
         </p>
       </div>
+     
       <div>
         <h2 className={Styles.heading}>
           Residential site / land for sale in {selSite.area}{" "}
@@ -27,6 +28,7 @@ const DynamicPage = ({ data }) => {
           {selSite.destrict} {selSite.destrict && ","} {selSite.state}{" "}
         </h2>
       </div>
+      <h3 className={Styles.propertyinfox}>Property Pictures</h3>
       <div>
         {selSite.pic1 && (
           <img className={Styles.siteimg} src={selSite.pic1} alt="image1" />
@@ -58,7 +60,7 @@ const DynamicPage = ({ data }) => {
         </div>
       )}
       <div className={Styles.contactholder}>
-       <div ><a  href="tel:{{selSite.contact}}"> <span className={Styles.contact}>Call <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 
+       <div ><a  href={`tel:${selSite.contact}`}> <span className={Styles.contact}>Call <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 
       </div>
     </div>
   );
