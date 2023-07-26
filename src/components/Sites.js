@@ -4,6 +4,7 @@ import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import Link from "next/link";
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import ShareIcon from '@mui/icons-material/Share';
 
 function Sites(props) {
   const [sites, setSites] = useState(props.sites);
@@ -61,6 +62,7 @@ function Sites(props) {
                     />
                   </div>
                   <div className={Styles.rightsite}>
+                  <span className={Styles.share} onClick={handleShare} ><ShareIcon/> </span>
                     <div>
                       <h3 className={Styles.price}>
                         {" "}
@@ -91,9 +93,7 @@ function Sites(props) {
        <div  className={Styles.contactbox}><a  href={`tel:${site.contact}`}> <span className={Styles.contact}>Call <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 
        <div className={Styles.contactboxx} ><a  href="https://wa.me/+919741104490"> <span className={Styles.contactx}>whatsapp <WhatsAppIcon className={Styles.callicnx} fontSize="small"/> </span> </a></div> 
       </div>
-      <div>
-        <button onClick={handleShare} type="button">share</button>
-      </div>
+      
               </div>
            
           </div>
