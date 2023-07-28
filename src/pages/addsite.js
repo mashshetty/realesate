@@ -103,10 +103,9 @@ function AddSite() {
         
       });
       console.log("site is ",site)
+      window.location.href=window.location.href;
       alert("site uploaded successfully !!")
     }
-
-    // alert("site added successfully!!")
   };
 
   const onDataChange = (e) => {
