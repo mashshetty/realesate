@@ -21,7 +21,7 @@ box-shadow: 2px 2px 17px -12px black;
     padding: 7px 5px;
     margin-bottom: 20px;
     width: 180px;
-    color: black;
+    color: rgb(255, 0, 0);
     border: 2px solid grey;
     background-color: white;
 }
