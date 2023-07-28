@@ -9,6 +9,9 @@ import ShareIcon from '@mui/icons-material/Share';
 
 function Sites(props) {
   const [sites, setSites] = useState(props.sites);
+  const [search,setSearch]=useState("")
+
+  
   const handleShare = async () => {
     try {
       if (navigator.share) {
@@ -26,6 +29,32 @@ function Sites(props) {
     }
   };
 
+
+
+  const handleSearch =async(e)=>{
+    
+    setSearch(e)
+    if(e==""){
+      setSites(props.sites)
+      return
+    }
+
+    let temp = []; 
+
+    if(sites.length != 0){
+      temp=sites; 
+    }else{
+      temp=props.sites
+    }
+      
+    const fData = temp.filter((item,index)=>{
+      if(item?.area?.includes(e) || item?.thaluk?.includes(e) || item?.district?.includes(e) || item?.state?.includes(e) || item?.price?.includes(e) || item?.sqft?.includes(e)){
+        return item;
+      }
+    })
+    setSites(fData)
+  }
+
   return (
     <div className={Styles.topcontainer}>
       <Head>
@@ -39,6 +68,7 @@ function Sites(props) {
       </h1>
       <div className={Styles.searchbox}>
         <input
+        value={search} onChange={e=>handleSearch(e.target.value)} 
           placeholder="search here"
           className={Styles.search}
           type="search"

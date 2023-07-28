@@ -100,7 +100,9 @@ function AddSite() {
         sqft: "",
         state: "",
         thaluk: "",
+        
       });
+      console.log("site is ",site)
       alert("site uploaded successfully !!")
     }
 
