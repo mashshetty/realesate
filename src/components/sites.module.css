@@ -180,3 +180,70 @@ font-weight: bold;
     color: #404040;
     padding-inline: 10px;
 }
+
+/* for mobile devices */
+
+@media only screen and (min-width: 750px) {
+   .contactholder  {
+      display: block;
+      width: auto;
+
+    }
+
+    .mainsitecontainer{
+        letter-spacing: 1.5px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: 100% !important;
+    }
+
+    .rightsite{
+        font-size: 120%;
+        width: 600px;
+        padding: 12px;
+        padding-inline: 40px;
+        box-shadow: 2px 2px 17px -12px black;
+
+    }
+    .img{
+        height: 140px;
+        width: 160px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 17px -12px black;
+    }
+
+    .sitedesc{
+        font-size: 140%;
+        padding: 5px;
+    }
+
+    .contactbox{
+        width: 155px;
+        box-shadow: 2px 2px 17px -12px black;
+
+    }
+
+    .contactboxx{
+        width: 155px;
+        box-shadow: 2px 2px 17px -12px black;
+
+    }
+
+    .share{
+        right: 26px
+    }
+
+    .heading{
+        font-size: 170%;
+        margin-bottom: 30px;
+    }
+
+    .search{
+        width: 400px;
+        margin-right: 10px;
+    }
+
+    .pricebox{
+        padding-inline: 15px;
+    }
+  }
