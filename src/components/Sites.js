@@ -33,7 +33,7 @@ function Sites(props) {
 
   const handleSearch =async(e)=>{
     
-    setSearch(e)
+    
     if(e==""){
       setSites(props.sites)
       return
@@ -68,12 +68,13 @@ function Sites(props) {
       </h1>
       <div className={Styles.searchbox}>
         <input
-        value={search} onChange={e=>handleSearch(e.target.value)} 
+        value={search} 
+        onChange={e=>setSearch(e.target.value)}
           placeholder="search here"
           className={Styles.search}
           type="search"
         />{" "}
-        <input className={Styles.searchbtn} type="button" value="search" />
+        <input className={Styles.searchbtn} onClick={e=>handleSearch(search)} type="button" value="search" />
       </div>
 
       {sites?.map((site, index) => {
