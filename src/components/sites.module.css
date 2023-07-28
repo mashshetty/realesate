@@ -177,4 +177,5 @@ font-weight: bold;
 .abouttext{
     font-size: 80%;
     color: #404040;
+    padding-inline: 10px;
 }
