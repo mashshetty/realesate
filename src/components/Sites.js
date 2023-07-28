@@ -38,14 +38,6 @@ function Sites(props) {
       setSites(props.sites)
       return
     }
-
-    // let temp = []; 
-
-    // if(sites.length != 0){
-    //   temp=sites; 
-    // }else{
-    //   temp=props.sites
-    // }
       
     const fData = await props.sites.filter((item,index)=>{
       if(item?.area.toLowerCase()?.includes(e.toLowerCase()) || item?.thaluk.toLowerCase()?.includes(e.toLowerCase()) || item?.district.toLowerCase()?.includes(e.toLowerCase()) || item?.state.toLowerCase()?.includes(e.toLowerCase()) || item?.price.toLowerCase()?.includes(e.toLowerCase()) || item?.sqft.toLowerCase()?.includes(e.toLowerCase())){

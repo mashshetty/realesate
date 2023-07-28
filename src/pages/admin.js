@@ -26,7 +26,7 @@ function admin() {
             <div className={Styles.adminIcons1}><AddLocationAltOutlinedIcon /></div>
         </div>
         <div className={`${Styles.adminBox} ${Styles.adminbox2}`}>
-           <div> <Link href="/addsite"> <span>Edit Sites</span></Link></div>
+           <div> <Link href="admin/editSite"> <span>Edit Sites</span></Link></div>
             <div className={Styles.adminIcons2}> <EditOutlinedIcon /> </div>
         </div>
         <div className={`${Styles.adminBox} ${Styles.adminbox3}`}>
