@@ -39,16 +39,16 @@ function Sites(props) {
       return
     }
 
-    let temp = []; 
+    // let temp = []; 
 
-    if(sites.length != 0){
-      temp=sites; 
-    }else{
-      temp=props.sites
-    }
+    // if(sites.length != 0){
+    //   temp=sites; 
+    // }else{
+    //   temp=props.sites
+    // }
       
-    const fData =await props.sites.filter((item,index)=>{
-      if(item?.area?.includes(e) || item?.thaluk?.includes(e) || item?.district?.includes(e) || item?.state?.includes(e) || item?.price?.includes(e) || item?.sqft?.includes(e)){
+    const fData = await props.sites.filter((item,index)=>{
+      if(item?.area?.includes(e)){
         return item;
       }
     })
