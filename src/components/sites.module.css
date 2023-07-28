@@ -173,3 +173,7 @@ font-weight: bold;
 .abouthead{
     margin-bottom: 10px;
 }
+
+.abouttext{
+    font-size: 80%;
+}

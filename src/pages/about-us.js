@@ -1,14 +1,11 @@
-import React from "react";
-import Sites from "./Sites";
-import Styles from "./sites.module.css"
-import Link from "next/link";
+import React from 'react'
+import Styles from "./addsite.module.css"
 
-function HomePage(props) {
+function Aboutus() {
   return (
-    <>
-      <Sites sites={props.sites} />
-      <div className={Styles.about}>
-        <h3 className={Styles.abouthead}> <Link href="/about-us">About Us</Link> </h3>
+    <div>
+       <div className={Styles.about}>
+        <h3 className={Styles.abouthead}>About Us</h3>
         <div className={Styles.abouttext}>
         Find your ideal land, home, or building in the charming towns of
         Karkala, Udupi, or Mangalore. Our real estate website provides a
@@ -19,8 +16,8 @@ function HomePage(props) {
         these charming coastal villages. Your ideal property is here, just for you!
         </div>
       </div>
-    </>
-  );
+    </div>
+  )
 }
 
-export default HomePage;
+export default Aboutus
