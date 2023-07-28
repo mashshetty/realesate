@@ -47,12 +47,12 @@ function Sites(props) {
       temp=props.sites
     }
       
-    const fData =await temp.filter((item,index)=>{
+    const fData =await props.sites.filter((item,index)=>{
       if(item?.area?.includes(e) || item?.thaluk?.includes(e) || item?.district?.includes(e) || item?.state?.includes(e) || item?.price?.includes(e) || item?.sqft?.includes(e)){
         return item;
       }
     })
-   await setSites(fData)
+   setSites(fData)
   }
 
   return (
