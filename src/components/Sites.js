@@ -56,7 +56,7 @@ function Sites(props) {
       </Head>
       <p className={Styles.nav}>Home / Udupi / karkala / Site for sale</p>
       <h1 className={Styles.heading}>
-        search results {sites?.length} | Land for sale in karkala, udupi
+        {sites?.length} + Land for sale in karkala, udupi
       </h1>
       <div className={Styles.searchbox}>
         <input
@@ -74,7 +74,7 @@ function Sites(props) {
            
               {" "}
               <div className={Styles.mainsitecontainer}>
-              <Link href={`/viewsite/${site.id}`}>
+              <Link href={`/site-for-sale-in-karkala-udupi/${site.id}`}>
                 <div className={Styles.sitescontainer}>
                   <div className={Styles.leftsite}>
                     <img

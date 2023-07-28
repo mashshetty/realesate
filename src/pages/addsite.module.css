@@ -118,8 +118,13 @@
 .about{
     margin: 10px;
     padding: 10px;
+  background-color: #f6f6f6;
     min-height: 100vh;
 
+}
+
+.abouttext{
+    color: grey;
 }
 @media only screen and (max-width: 600px) {
    .addsite{

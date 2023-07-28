@@ -142,14 +142,14 @@ border-radius: 35px;
 
 .callicn{
     position: relative;
-    font-size: 104%;
-    top: 2px;
+    top: 3px;
+    font-size: 16px !important;
 }
 
 .callicnx{
     position: relative;
-    top: 3px;
-    font-size: 102%;
+    top: 5px;
+    font-size: 16px !important;
 }
 
 .contact, .contactx{
@@ -176,4 +176,5 @@ font-weight: bold;
 
 .abouttext{
     font-size: 80%;
+    color: #404040;
 }
