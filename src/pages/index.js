@@ -35,6 +35,7 @@ export default function Home({data}) {
     <>
       <Head>
         <title>site for sale in karkala and udupi</title>
+        <meta name="google-site-verification" content="GH11khUZvxYUlyWl-B2R9DhgACjCTdf5UgB8_BIYIJ0" />
         <meta name="description" content="land for sale in udupi and karkala" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="https://res.cloudinary.com/ddq3nzfq8/image/upload/v1690531821/logo2_ibqyk1.png" />
