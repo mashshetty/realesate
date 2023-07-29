@@ -3,12 +3,16 @@ import Styles from "./admin.module.css";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import Head from "next/head";
 import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from '@mui/icons-material/Edit';
 import getData from "@/components/getDoc";
 import {deleteDoc,doc } from "firebase/firestore";
 import { db } from "@/firebase-config";
+import BasicModal from "./editmodel";
 function Sites(props) {
   const [sites, setSites] = useState(props.sites);
   const [search, setSearch] = useState("");
+  const [open, setOpen] = useState(false);
+  const [eSite,editSite]=useState("")
 
   const deleteUser = async (id) => {
     const userDoc = doc(db, "sites", id);
@@ -45,6 +49,7 @@ function Sites(props) {
     setSites(fData);
   };
 
+ 
   return (
     <div className={Styles.topcontainer}>
       <Head>
@@ -89,6 +94,9 @@ function Sites(props) {
                     />
                   </div>
                   <div className={Styles.rightsite}>
+                    <span onClick={e=>{setOpen(!open);editSite(sites[index])}}  className={Styles.edit}>
+                      <EditIcon />{" "}
+                    </span>
                     <span onClick={e=>deleteUser(site?.id)} className={Styles.share}>
                       <DeleteIcon />{" "}
                     </span>
@@ -123,6 +131,8 @@ function Sites(props) {
           </div>
         );
       })}
+      {open && <BasicModal site={eSite} open={open} setopen={setOpen}/>}
+    
     </div>
   );
 }

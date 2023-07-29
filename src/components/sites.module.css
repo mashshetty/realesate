@@ -165,6 +165,7 @@ font-weight: bold;
 .details{
     margin-bottom: 20px;
     color: rgb(47, 47, 47);
+    font-size: 110%;
 }
 
 .share{

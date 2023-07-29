@@ -166,6 +166,152 @@ font-weight: bold;
     position: absolute;
     top: 10px;
     right: 10px;
-    color: lightskyblue;
+    color: rgb(255, 98, 66);
     cursor: pointer;
 }
+.edit{
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    color: rgb(151, 177, 255);
+    cursor: pointer;
+}
+
+.inputboxcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.container{
+   
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.inputcol{
+    background: rgb(174, 87, 255);
+    padding: 10px;
+
+}
+
+.input{
+    padding: 8px 15px;
+    border: 2px solid white;
+    font-size: 110%;
+    border-radius: 5px;
+    outline: grey;
+    margin: 10px;
+    width: 250px;
+    background: white;
+    color: black;
+
+}
+
+.singleinp{
+    display: flex;
+    justify-content: center;
+    font-size: 110%;
+}
+
+.inputmain{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px black;
+    background-color: blueviolet;
+    /* width: 100%; */
+
+}
+
+.addsite{
+    font-size: 170%;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+.addpicture{
+    font-size: 130%;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(255, 143, 255);
+
+}
+
+.btn{
+    border-radius: 10px !important;
+    padding: 7px 30px !important;
+    margin: 10px !important;
+    margin-top: 30px !important;
+    background: rgb(255, 75, 255) !important;
+}
+
+.btn:hover{
+    background: rgb(251, 28, 251) !important;
+}
+
+.errormsg{
+    color: rgb(86 0 0);
+}
+
+.errormsgx{
+    color: rgb(86 0 0);
+    margin-top: 5px;
+
+}
+
+.label{
+    font-weight: 500;
+    font-size: 110% !important;
+    margin: 0;
+    margin-top: 10px;
+    color: rgb(229, 229, 229);
+}
+
+.labelx{
+    font-weight: 500;
+    font-size: 110% !important;
+    margin: 0;
+    margin-top: 10px;
+    color: rgb(229, 229, 229);
+    margin-bottom: 5px;
+}
+
+.abouthead{
+    margin-bottom: 10px;
+}
+
+.abouttext{
+    font-size: 80%;
+}
+
+.about{
+    margin: 10px;
+    padding: 10px;
+  background-color: #f6f6f6;
+    min-height: 100vh;
+
+}
+
+.abouttext{
+    color: grey;
+}
+@media only screen and (max-width: 600px) {
+   .addsite{
+    font-size: 140%;
+   }
+
+   .addpicture{
+    font-size: 110%;
+   }
+  }
+  
+
