@@ -36,9 +36,9 @@ function AddSite() {
     thaluk: false,
   });
 
-  const [validated, setValidated] = useState(false);
 
   const add = async () => {
+    let val = false;
     const err = {};
     if (!site.area) {
       err.area = true;
@@ -79,10 +79,10 @@ function AddSite() {
     setSiteErr(err);
 
     if(!err.area && !err.thaluk && !err.district && !err.state && !err.price && !err.sqft && !err.pic1 && !err.pic2){
-      setValidated(true)
+      val=true
     }
 
-    if (validated) {
+    if (val) {
       await addDoc(posts, site);
       addSite({
         area: "",

@@ -1,5 +1,7 @@
 .topcontainer{
     background-color: #f6f6f6;
+    padding: 10px;
+
 }
 
 .mainsitecontainer{
@@ -221,7 +223,7 @@ font-weight: bold;
 }
 
 .inputmain{
-    margin: 10px;
+    /* margin: 10px; */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 3px 3px 10px black;

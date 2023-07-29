@@ -59,9 +59,10 @@ function BasicModal(props) {
     thaluk: false,
   });
 
-  const [validated, setValidated] = useState(false);
+
 
   const edit = async () => {
+    let val =false;
     const err = {};
     if (!site.area) {
       err.area = true;
@@ -102,10 +103,10 @@ function BasicModal(props) {
     setSiteErr(err);
 
     if(!err.area && !err.thaluk && !err.district && !err.state && !err.price && !err.sqft && !err.pic1 && !err.pic2){
-      setValidated(true)
+      val=true;
     }
 
-    if (validated) {
+    if (val) {
       console.log("dta is",site.id,site)
       console.log("site is ",site)
       const userDoc = doc(db, "sites", site.id);

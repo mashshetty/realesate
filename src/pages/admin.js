@@ -13,8 +13,8 @@ function admin() {
         <div className={Styles.dashboard}>
 
             <div><span className={Styles.dash}>Dashboard <DashboardCustomizeIcon fontSize="large" /> </span></div>
-            <div>
-                <span className={Styles.hello}>Welcome Admin !!</span>
+            <div className={Styles.hello}>
+                <span >Welcome Admin!!</span>
             </div>
         </div>
         <div className={Styles.admiboxcontainer}>
