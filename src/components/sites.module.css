@@ -162,6 +162,11 @@ font-weight: bold;
 
 }
 
+.details{
+    margin-bottom: 20px;
+    color: rgb(47, 47, 47);
+}
+
 .share{
     position: absolute;
     top: 10px;
@@ -183,7 +188,7 @@ font-weight: bold;
 
 /* for mobile devices */
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 850px) {
    .contactholder  {
       display: block;
       width: auto;
@@ -195,6 +200,7 @@ font-weight: bold;
         flex-direction: row;
         justify-content: space-evenly;
         font-size: 100% !important;
+        margin-inline: 30px;
     }
 
     .rightsite{
@@ -245,5 +251,14 @@ font-weight: bold;
 
     .pricebox{
         padding-inline: 15px;
+    }
+
+    .abouthead{
+        font-size: 200%;
+    }
+
+    .abouttext{
+        font-size: 110%;
+        
     }
   }
