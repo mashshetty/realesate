@@ -29,22 +29,22 @@ function BasicModal(props) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => {setOpen(false); props.setopen(!props.open)}
   const [site, addSite] = useState({
-    area: props.site.area,
-    contact: props.site.contact,
-    description: props.site.description,
-    district: props.site.district,
-    pic1: props.site.pic1,
-    pic2: props.site.pic2,
-    pic3: props.site.pic3,
-    pic4:props.site.pic4,
-    pic5:props.site.pic5,
-    pic6: props.site.pic6,
-    pic7:props.site.pic7,
-    price: props.site.price,
-    sqft: props.site.sqft,
-    state: props.site.state,
-    thaluk: props.site.thaluk,
-    id:props.site.id
+    area: props.site?.area?props.site.area:"",
+    contact: props.site?.contact?props.site?.contact:"",
+    description: props.site?.description?props.site.description:"",
+    district: props.site?.district?props.site.district:"",
+    pic1: props.site?.pic1?props.site.pic1:"",
+    pic2: props.site?.pic2?props.site.pic2:"",
+    pic3: props.site?.pic3?props.site.pic3:"",
+    pic4:props.site?.pic4?props.site.pic4:"",
+    pic5:props.site?.pic5?props.site.pic5:"",
+    pic6: props.site?.pic6?props.site.pic6:"",
+    pic7:props.site?.pic7?props.site?.pic7:"",
+    price: props.site?.price?props.site.price:"",
+    sqft: props.site?.sqft?props.site.sqft:"",
+    state: props.site?.state?props.site?.state:"",
+    thaluk: props.site?.thaluk?props.site?.thaluk:"",
+    id:props.site?.id?props.site?.id:""
   });
 
   const [siteErr, setSiteErr] = useState({
