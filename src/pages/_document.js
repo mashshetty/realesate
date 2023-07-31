@@ -7,7 +7,7 @@ export default function Document() {
 
 
         <meta httpEquiv="Content-Language" content="en" />
-        <link rel="icon" href="https://res.cloudinary.com/ddq3nzfq8/image/upload/v1690531249/logo_h5lidb.jpg" type="image/png" />
+        <link rel="icon" href="https://res.cloudinary.com/ddq3nzfq8/image/upload/v1690821983/Buy-Propertyx_gnhvxy.png" type="image/png" />
 
 
       </Head>

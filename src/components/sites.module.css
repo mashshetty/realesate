@@ -91,6 +91,8 @@ box-shadow: 2px 2px 17px -12px black;
     
 }
 
+
+
 .residential{
     font-weight: 600;
 }
@@ -222,6 +224,8 @@ font-weight: bold;
     .sitedesc{
         font-size: 120%;
         padding: 5px;
+        width: 800px;
+        margin: auto;
     }
 
     .contactbox{
@@ -261,5 +265,13 @@ font-weight: bold;
     .abouttext{
         font-size: 110%;
         
+    }
+
+    .leftsite{
+        flex: 20%;
+        margin-right: 20px;
+    }
+    .rightsite{
+        flex: 80%;
     }
   }

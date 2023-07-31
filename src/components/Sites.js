@@ -112,10 +112,14 @@ function Sites(props) {
                     </div>
                     <div>
                       Plot Area : <strong> {site.sqft} </strong> sqft
+                      
                     </div>
+
+
+
                   </div>
                 </div>
-              {site.description &&  <p className={Styles.sitedesc}> {site.description}</p>}
+                {site.description &&  <p className={Styles.sitedesc}> {site.description}</p>}
                 </Link>
                 <div className={Styles.contactholder}>
        <div  className={Styles.contactbox}><a  href={`tel:${site.contact}`}> <span className={Styles.contact}>Call <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 

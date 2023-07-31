@@ -8,6 +8,10 @@
     
 }
 
+.topmaincontainer{
+ background-color: #f6f6f6;;
+}
+
 .container{
     position: relative;
     padding: 10px;
@@ -21,14 +25,14 @@
 }
 
 .heading{
-    font-size: 140%;
+    font-size: 130%;
     margin-bottom: 20px;
 }
 
 
 .desc{
 padding: 10px;
-font-size: 120%;
+font-size: 100%;
 background: rgb(240, 240, 240);
 margin: 5px;
 border-radius: 10px;
@@ -133,4 +137,15 @@ border-radius: 10px;
     top: 10px;
     right: 5vw;
     color: lightskyblue;
+}
+
+@media only screen and (min-width: 850px) {
+.desc{
+    font-size: 120%;
+    margin-top: 10px;
+}
+
+.heading{
+    font-size: 140%;
+}
 }
