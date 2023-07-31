@@ -29,6 +29,16 @@
     margin-bottom: 20px;
 }
 
+.gobackicn{
+    position: relative;
+    top: 6px;
+}
+
+.goback{
+    margin-bottom: 20px;
+    color: grey;
+}
+
 
 .desc{
 padding: 10px;
@@ -147,5 +157,16 @@ border-radius: 10px;
 
 .heading{
     font-size: 140%;
+}
+
+.siteimagesx{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.siteimg{
+    height: auto;
+    width: 600px;
 }
 }

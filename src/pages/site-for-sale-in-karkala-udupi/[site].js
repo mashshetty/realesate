@@ -9,6 +9,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import getData from "@/components/getDoc";
 import Link from "next/link";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Stylesite from "../../components/sites.module.css";
 
 const DynamicPage = ({ data, sites }) => {
@@ -53,18 +54,19 @@ const DynamicPage = ({ data, sites }) => {
             for sale
           </p>
         </div>
+        <div className={Styles.goback}><Link href="/">  <ArrowBackIcon className={Styles.gobackicn}/>  Go to home</Link> </div>
 
         <div>
           <h2 className={Styles.heading}>
             Residential site / land for sale in {selSite.area}
             {selSite.area && ","} {selSite.thaluk} {selSite.thaluk && ","}
             {selSite.destrict} {selSite.destrict && ","} {selSite.state},
-            covering {selSite.sqft} sqft of area at an unbeatable price of{" "}
+            covering {selSite.sqft} sqft of area at an unbeatable price of
             {selSite.price}
           </h2>
         </div>
         <h3 className={Styles.propertyinfox}>Property Pictures</h3>
-        <div>
+        <div className={Styles.siteimagesx}>
           {selSite.pic1 && (
             <img
               className={Styles.siteimg}
