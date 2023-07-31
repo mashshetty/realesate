@@ -56,7 +56,7 @@ function Sites(props) {
       </Head>
       <p className={Styles.nav}>Home / Udupi / karkala / Site for sale</p>
       <h1 className={Styles.heading}>
-        {sites?.length} + Land for sale in karkala, udupi
+       Find {sites?.length} + Land / House / Site for sale in karkala, udupi
       </h1>
 
       <h3 className={Styles.details}>Welcome to our premier real estate website, where your dream property awaits in the charming towns of Karkala, Udupi, and Mangalore. </h3>

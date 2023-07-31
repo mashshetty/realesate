@@ -7,38 +7,48 @@ import getData from "@/components/getDoc";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({data}) {
-  const [mob,setMob]=useState(true)
+export default function Home({ data }) {
+  const [mob, setMob] = useState(true);
   useEffect(() => {
-   const findDevice =()=>{
-    const userAgent = window.navigator === "undefined"?"":navigator.userAgent;
-    const mobile = Boolean(
-      userAgent.match(
-        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
-      )
-    );
+    const findDevice = () => {
+      const userAgent =
+        window.navigator === "undefined" ? "" : navigator.userAgent;
+      const mobile = Boolean(
+        userAgent.match(
+          /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+        )
+      );
 
-    if(mobile){
-      return true;
-    }else{
-      return false;
-    }
-   }
+      if (mobile) {
+        return true;
+      } else {
+        return false;
+      }
+    };
 
-   findDevice()
-   setMob(findDevice())
-   localStorage.setItem("isMobile",findDevice())
+    findDevice();
+    setMob(findDevice());
+    localStorage.setItem("isMobile", findDevice());
+  }, []);
 
-  }, [])
-  
   return (
     <>
       <Head>
         <title>site for sale in karkala and udupi</title>
-        <meta name="google-site-verification" content="GH11khUZvxYUlyWl-B2R9DhgACjCTdf5UgB8_BIYIJ0" />
-        <meta name="description" content="land for sale in udupi and karkala" />
+        <meta
+          name="google-site-verification"
+          content="GH11khUZvxYUlyWl-B2R9DhgACjCTdf5UgB8_BIYIJ0"
+        />
+        {/* <meta name="description" content="land for sale in udupi and karkala" /> */}
+        <meta
+          name="description"
+          content="find the top land, site, house and real estate for sale in Karkala, Udupi, and Mangalore. Find house, site, land, or other property of your dreams at fair price."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="https://res.cloudinary.com/ddq3nzfq8/image/upload/v1690531821/logo2_ibqyk1.png" />
+        <link
+          rel="icon"
+          href="https://res.cloudinary.com/ddq3nzfq8/image/upload/v1690531821/logo2_ibqyk1.png"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -48,15 +58,14 @@ export default function Home({data}) {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.maincontainer}>
-        {mob? <HomePage sites={data}/>:<HomePage sites={data}/>}
+          {mob ? <HomePage sites={data} /> : <HomePage sites={data} />}
         </div>
       </main>
     </>
   );
 }
 
-
-export async function getServerSideProps(){
+export async function getServerSideProps() {
   const data = await getData();
-  return { props: { data:data }};
+  return { props: { data: data } };
 }

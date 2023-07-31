@@ -6,9 +6,12 @@ import Styles from "../../components/slug.module.css";
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import ShareIcon from '@mui/icons-material/Share';
+import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
+import getData from "@/components/getDoc";
+import Link from "next/link";
+import Stylesite from "../../components/sites.module.css"
 
-
-const DynamicPage = ({ data }) => {
+const DynamicPage = ({ data,sites }) => {
 
   const [selSite, setSite] = useState(data);
 
@@ -32,26 +35,24 @@ const DynamicPage = ({ data }) => {
     setSite(data);
   }, [data]);
   return (
+    <>
     <div className={Styles.container}>
       <Head>
         <title>view site for sale in karkala, udupi and mangalore</title>
-        <meta httpEquiv="Content-Language" content="en" />
         <meta name="description" content={`Residential site / land for sale in ${selSite.area}${selSite.area && ","} ${selSite.thaluk} ${selSite.thaluk && ","}${selSite.district} ${selSite.district && ","} ${selSite.state}`} />
-
       </Head>
       <div>
         <p className={Styles.nav}>
-          {" "}
           Home / {selSite.destrict ? selSite.destrict : selSite.thaluk} / Site
-          for sale{" "}
+          for sale
         </p>
       </div>
      
       <div>
         <h2 className={Styles.heading}>
-          Residential site / land for sale in {selSite.area}{" "}
+          Residential site / land for sale in {selSite.area}
           {selSite.area && ","} {selSite.thaluk} {selSite.thaluk && ","}
-          {selSite.destrict} {selSite.destrict && ","} {selSite.state}
+          {selSite.destrict} {selSite.destrict && ","} {selSite.state}, covering {selSite.sqft} sqft of area at an unbeatable price of {selSite.price} 
         </h2>
       </div>
       <h3 className={Styles.propertyinfox}>Property Pictures</h3>
@@ -94,6 +95,65 @@ const DynamicPage = ({ data }) => {
       <span className={Styles.share} onClick={handleShare} ><ShareIcon/> </span>
 
     </div>
+    <h3 className={Styles.propertyinfoxx}>Take a quick look at other available sites / land for sale.</h3>
+    {sites?.map((site, index) => {
+        return (
+          <div key={index}>
+           
+              {" "}
+              <div className={Stylesite.mainsitecontainer}>
+              <Link href={`/site-for-sale-in-karkala-udupi/${site.id}`}>
+                <div className={Stylesite.sitescontainer}>
+                  <div className={Stylesite.leftsite}>
+                    <img
+                      className={Stylesite.img}
+                      src={
+                        site.pic1
+                          ? site.pic1
+                          : "https://res.cloudinary.com/ddq3nzfq8/image/upload/v1690282269/property_vmds1r.png"
+                      }
+                      alt="image"
+                    />
+                  </div>
+                  <div className={Stylesite.rightsite}>
+                  <span className={Stylesite.share} onClick={handleShare} ><ShareIcon/> </span>
+                    <div>
+                      <h3 className={Stylesite.price}>
+                        {" "}
+                        <span className={Stylesite.pricebox}>
+                          <CurrencyRupeeIcon
+                            fontSize="small"
+                            className={Stylesite.priceicn}
+                          />{" "}
+                          {site.price}
+                        </span>{" "}
+                      </h3>
+                    </div>
+                    <div>
+                      {" "}
+                      <span className={Stylesite.residential}>
+                        Residential Plot / Land
+                      </span>{" "}
+                      for sale in {site.area}, {site.thaluk}, {site.state}
+                    </div>
+                    <div>
+                      Plot Area : <strong> {site.sqft} </strong> sqft
+                    </div>
+                  </div>
+                </div>
+              {site.description &&  <p className={Stylesite.sitedesc}> {site.description}</p>}
+                </Link>
+                <div className={Stylesite.contactholder}>
+       <div  className={Stylesite.contactbox}><a  href={`tel:${site.contact}`}> <span className={Stylesite.contact}>Call <AddIcCallIcon className={Stylesite.callicn} fontSize="small"/> </span> </a></div> 
+       <div className={Stylesite.contactboxx} ><a  href="https://wa.me/+919741104490"> <span className={Stylesite.contactx}>whatsapp <WhatsAppIcon className={Stylesite.callicnx} fontSize="small"/> </span> </a></div> 
+      </div>
+      
+              </div>
+           
+          </div>
+        );
+      })}
+    </>
   );
 };
 
@@ -103,5 +163,6 @@ export async function getServerSideProps(context) {
   const documentRef = doc(db, "sites", context.query.site);
   const documentSnapshot = await getDoc(documentRef);
   const data = { ...documentSnapshot.data() };
-  return { props: { data: data } };
+  const sites = await getData();
+  return { props: { data: data,sites:sites } };
 }
