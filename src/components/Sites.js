@@ -86,7 +86,7 @@ function Sites(props) {
                           ? site.pic1
                           : "https://res.cloudinary.com/ddq3nzfq8/image/upload/v1690282269/property_vmds1r.png"
                       }
-                      alt="image"
+                      alt="land/site for sale in karkala,udupi img"
                     />
                   </div>
                   <div className={Styles.rightsite}>

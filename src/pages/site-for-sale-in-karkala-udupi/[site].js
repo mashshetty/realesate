@@ -58,22 +58,22 @@ const DynamicPage = ({ data,sites }) => {
       <h3 className={Styles.propertyinfox}>Property Pictures</h3>
       <div>
         {selSite.pic1 && (
-          <img className={Styles.siteimg} src={selSite.pic1} alt="image1" />
+          <img className={Styles.siteimg} src={selSite.pic1} alt="land/site for sale in karkala,udupi img" />
         )}
         {selSite.pic2 && (
-          <img className={Styles.siteimg} src={selSite.pic2} alt="image1" />
+          <img className={Styles.siteimg} src={selSite.pic2} alt="land/site for sale in karkala,udupi img"  />
         )}
         {selSite.pic3 && (
-          <img className={Styles.siteimg} src={selSite.pic3} alt="image1" />
+          <img className={Styles.siteimg} src={selSite.pic3} alt="land/site for sale in karkala,udupi img"  />
         )}
         {selSite.pic4 && (
-          <img className={Styles.siteimg} src={selSite.pic4} alt="image1" />
+          <img className={Styles.siteimg} src={selSite.pic4} alt="land/site for sale in karkala,udupi img" />
         )}
         {selSite.pic5 && (
-          <img className={Styles.siteimg} src={selSite.pic5} alt="image1" />
+          <img className={Styles.siteimg} src={selSite.pic5} alt="land/site for sale in karkala,udupi img"  />
         )}
         {selSite.pic6 && (
-          <img className={Styles.siteimg} src={selSite.pic6} alt="image1" />
+          <img className={Styles.siteimg} src={selSite.pic6} alt="land/site for sale in karkala,udupi img"  />
         )}
       </div>
       <h3 className={Styles.propertyinfo}>Property Information</h3>

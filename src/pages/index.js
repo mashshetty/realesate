@@ -34,7 +34,7 @@ export default function Home({ data }) {
   return (
     <>
       <Head>
-        <title>site for sale in karkala and udupi</title>
+        <title>find site for sale in karkala, udupi and mangalore at unbeatable price </title>
         <meta
           name="google-site-verification"
           content="GH11khUZvxYUlyWl-B2R9DhgACjCTdf5UgB8_BIYIJ0"
