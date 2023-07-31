@@ -3,7 +3,6 @@ import Styles from "./addsite.module.css"
 
 function Aboutus() {
   return (
-    <div>
        <div className={Styles.about}>
         <h3 className={Styles.abouthead}>About Us</h3>
         <div className={Styles.abouttext}>
@@ -16,7 +15,6 @@ function Aboutus() {
         these charming coastal villages. Your ideal property is here, just for you!
         </div>
       </div>
-    </div>
   )
 }
 
