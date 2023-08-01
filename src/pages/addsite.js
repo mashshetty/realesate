@@ -5,8 +5,10 @@ import Button from "@mui/material/Button";
 import Styles from "./addsite.module.css";
 
 function AddSite() {
+  
   const posts = collection(db, "sites");
   const [site, addSite] = useState({
+    date:new Date().toDateString(),
     area: "",
     contact: "",
     description: "",
@@ -85,6 +87,7 @@ function AddSite() {
     if (val) {
       await addDoc(posts, site);
       addSite({
+        date:"",
         area: "",
         contact: "",
         description: "",
@@ -100,9 +103,9 @@ function AddSite() {
         sqft: "",
         state: "",
         thaluk: "",
+        date: "",
         
       });
-      console.log("site is ",site)
       window.location.href=window.location.href;
       alert("site uploaded successfully !!")
     }
@@ -113,6 +116,7 @@ function AddSite() {
   };
 
   const onFileChange = (e) => {
+
     const data = new FormData();
     data.append("file", e.target.files[0]);
     data.append("upload_preset", "demoapp");

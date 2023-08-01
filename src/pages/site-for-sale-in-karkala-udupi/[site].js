@@ -61,10 +61,14 @@ const DynamicPage = ({ data, sites }) => {
             Residential site / land for sale in {selSite.area}
             {selSite.area && ","} {selSite.thaluk} {selSite.thaluk && ","}
             {selSite.destrict} {selSite.destrict && ","} {selSite.state},
-            covering {selSite.sqft} sqft of area at an unbeatable price of
-            {selSite.price}
+            covering {selSite.sqft} sqft of area at an unbeatable price of {selSite.price}
           </h2>
         </div>
+        {selSite.description && (
+          <div>
+            <h2 className={Styles.desc}>{selSite.description}</h2>
+          </div>
+        )}
         <h3 className={Styles.propertyinfox}>Property Pictures</h3>
         <div className={Styles.siteimagesx}>
           {selSite.pic1 && (
@@ -111,11 +115,7 @@ const DynamicPage = ({ data, sites }) => {
           )}
         </div>
         <h3 className={Styles.propertyinfo}>Property Information</h3>
-        {selSite.description && (
-          <div>
-            <p className={Styles.desc}>{selSite.description}</p>
-          </div>
-        )}
+        
         <div className={Styles.priceandsqft}>
           <div className={Styles.price}>
             {" "}

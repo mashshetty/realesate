@@ -6,6 +6,8 @@ import Head from "next/head";
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import ShareIcon from '@mui/icons-material/Share';
+import moment from 'moment';
+
 
 function Sites(props) {
   const [sites, setSites] = useState(props.sites);
@@ -59,7 +61,8 @@ function Sites(props) {
        Find {sites?.length} + Land / House / Site for sale in karkala, udupi at unbeatable price !!.
       </h1>
 
-      <h3 className={Styles.details}>Welcome to our premier real estate website, where your dream property awaits in the charming towns of Karkala, Udupi, and Mangalore. </h3>
+      <h3 className={Styles.details}>Welcome to our premier real estate website, where your dream property awaits in the charming towns of Karkala, Udupi, and Mangalore for sale. </h3>
+
       <div className={Styles.searchbox}>
         <input
         value={search} onChange={e=>handleSearch(e.target.value)} 
@@ -69,8 +72,48 @@ function Sites(props) {
         />{" "}
         <input className={Styles.searchbtn} type="button" value="search" />
       </div>
+      {sites.length == 0 && <div className={Styles.notfound}> <p >No sites found!!</p></div>}
 
       {sites?.map((site, index) => {
+        let dateString = site.date?site.date:'Tue Jul 18 2023'
+        const months = {
+          Jan: '01',
+          Feb: '02',
+          Mar: '03',
+          Apr: '04',
+          May: '05',
+          Jun: '06',
+          Jul: '07',
+          Aug: '08',
+          Sep: '09',
+          Oct: '10',
+          Nov: '11',
+          Dec: '12',
+        };
+        const formattedDate = `${dateString.slice(-4)}-${months[dateString.slice(4, 7)]}-${dateString.slice(8, 10)}`;
+        const momentDate = moment(formattedDate, 'YYYY-MM-DD');
+        const agoText = momentDate.fromNow();
+        let count = 0;
+       
+          if(site.pic1){
+            count++
+          }
+          if(site.pic2){
+            count++
+          }
+          if(site.pic3){
+            count++
+          }
+          if(site.pic4){
+            count++
+          }
+          if(site.pic5){
+            count++
+          }
+          if(site.pic6){
+            count++
+          }
+     
         return (
           <div key={index}>
            
@@ -79,6 +122,9 @@ function Sites(props) {
               <Link href={`/site-for-sale-in-karkala-udupi/${site.id}`}>
                 <div className={Styles.sitescontainer}>
                   <div className={Styles.leftsite}>
+                    <span className={Styles.imagetag}>1/{count}</span>
+                    <div className={Styles.picholder}>
+                  <p className={Styles.agotext}>posted {agoText}</p>
                     <img
                       className={Styles.img}
                       src={
@@ -88,6 +134,7 @@ function Sites(props) {
                       }
                       alt="land/site for sale in karkala,udupi img"
                     />
+                    </div>
                   </div>
                   <div className={Styles.rightsite}>
                   <span className={Styles.share} onClick={handleShare} ><ShareIcon/> </span>
@@ -120,7 +167,9 @@ function Sites(props) {
                   </div>
                 </div>
                 {site.description &&  <p className={Styles.sitedesc}> {site.description}</p>}
+                
                 </Link>
+                
                 <div className={Styles.contactholder}>
        <div  className={Styles.contactbox}><a  href={`tel:${site.contact}`}> <span className={Styles.contact}>Call <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 
        <div className={Styles.contactboxx} ><a  href="https://wa.me/+919741104490"> <span className={Styles.contactx}>whatsapp <WhatsAppIcon className={Styles.callicnx} fontSize="small"/> </span> </a></div> 

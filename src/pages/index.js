@@ -9,27 +9,27 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ data }) {
   const [mob, setMob] = useState(true);
-  useEffect(() => {
-    const findDevice = () => {
-      const userAgent =
-        window.navigator === "undefined" ? "" : navigator.userAgent;
-      const mobile = Boolean(
-        userAgent.match(
-          /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
-        )
-      );
+  // useEffect(() => {
+  //   const findDevice = () => {
+  //     const userAgent =
+  //       window.navigator === "undefined" ? "" : navigator.userAgent;
+  //     const mobile = Boolean(
+  //       userAgent.match(
+  //         /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+  //       )
+  //     );
 
-      if (mobile) {
-        return true;
-      } else {
-        return false;
-      }
-    };
+  //     if (mobile) {
+  //       return true;
+  //     } else {
+  //       return false;
+  //     }
+  //   };
 
-    findDevice();
-    setMob(findDevice());
-    localStorage.setItem("isMobile", findDevice());
-  }, []);
+  //   findDevice();
+  //   setMob(findDevice());
+  //   localStorage.setItem("isMobile", findDevice());
+  // }, []);
 
   return (
     <>
@@ -42,7 +42,7 @@ export default function Home({ data }) {
         {/* <meta name="description" content="land for sale in udupi and karkala" /> */}
         <meta
           name="description"
-          content="find the top land, site, house and real estate for sale in Karkala, Udupi, and Mangalore. Find house, site, land, or other property of your dreams at fair price."
+          content="Find the top land, plot, house and site for sale in Karkala, Udupi, and Mangalore. Get your dream property at fair price"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
@@ -58,7 +58,7 @@ export default function Home({ data }) {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.maincontainer}>
-          {mob ? <HomePage sites={data} /> : <HomePage sites={data} />}
+         <HomePage sites={data} />
         </div>
       </main>
     </>

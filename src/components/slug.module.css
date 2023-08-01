@@ -44,8 +44,9 @@
 padding: 10px;
 font-size: 100%;
 background: rgb(240, 240, 240);
-margin: 5px;
+font-weight: 400;
 border-radius: 10px;
+margin-bottom: 20px;
 
 
 }
