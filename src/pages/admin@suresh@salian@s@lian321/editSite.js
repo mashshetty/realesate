@@ -16,15 +16,21 @@ function Sites(props) {
 
   const deleteUser = async (id) => {
     const userDoc = doc(db, "sites", id);
-    await deleteDoc(userDoc);
-    setSearch("")
-    const deldata = sites.filter((item)=>{
-        if(item.id != id){
-            return item;
-        }
-    })
-
-    setSites(deldata)
+    const userResponse = window.prompt('Do you want to delete? (Type "y" or "n")');
+    const sanitizedResponse = userResponse.toLowerCase().trim();
+    if (sanitizedResponse === 'y') {
+      await deleteDoc(userDoc);
+      setSearch("")
+      const deldata = sites.filter((item)=>{
+          if(item.id != id){
+              return item;
+          }
+      })
+  
+      setSites(deldata)
+      alert('deleted successfully!!');
+    }
+   
   };
 
   const handleSearch = async (e) => {

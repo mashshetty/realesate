@@ -315,5 +315,23 @@ font-weight: bold;
     font-size: 110%;
    }
   }
+
+  @media only screen and (min-width: 850px) {
+    .rightsite{
+        font-size: 150%;
+    }
+
+    .sitedesc{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 140%;
+    }
+
+    .img{
+        height: 200px;
+        width: 240px;
+        border-radius: 10px;
+    }
+  }
   
 

@@ -96,7 +96,7 @@ box-shadow: 2px 2px 17px -12px black;
 
 .imagetag{
     position: absolute;
-    right: 20px;
+    right: 7px;
     font-size: 100%;
     color: white;
 }
@@ -107,8 +107,8 @@ box-shadow: 2px 2px 17px -12px black;
 .agotext{
     position: absolute;
     bottom: 5.5px;
-    font-size: 60%;
-    background: #8080809e;
+    font-size: 64%;
+    background: #808080b3;
     color: white;
     padding-inline: 10px;
     width: 100px;

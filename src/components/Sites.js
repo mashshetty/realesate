@@ -122,8 +122,9 @@ function Sites(props) {
               <Link href={`/site-for-sale-in-karkala-udupi/${site.id}`}>
                 <div className={Styles.sitescontainer}>
                   <div className={Styles.leftsite}>
-                    <span className={Styles.imagetag}>1/{count}</span>
+                   
                     <div className={Styles.picholder}>
+                    <span className={Styles.imagetag}>1/{count}</span>
                   <p className={Styles.agotext}>posted {agoText}</p>
                     <img
                       className={Styles.img}
