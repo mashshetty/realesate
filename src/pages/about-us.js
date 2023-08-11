@@ -13,7 +13,7 @@ function Aboutus() {
 
         <div className={Styles.abouttext}>
         Find your ideal land, home, or building for sale in the charming towns of
-        Karkala, Udupi, or Mangalore. Our real estate website provides a
+        Karkala,<Link href="/property-for-sale-in-udupi">  Udupi</Link>, and <Link href="/property-for-sale-in-mangalore">  Mangalore </Link>. Our real estate website provides a
         hand-picked selection of property that are catered to your interests and
         requirements. Examine a variety of selection of offerings, from opulent
         estates to tranquil country site or property, all expertly curated by our agent.

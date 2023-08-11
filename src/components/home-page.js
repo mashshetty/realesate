@@ -11,7 +11,7 @@ function HomePage(props) {
         <h3 className={Styles.abouthead}> <Link href="/about-us">About Us</Link> </h3>
         <div className={Styles.abouttext}>
         Find your ideal land, home, or building for sale in the charming towns of
-        Karkala, Udupi, or Mangalore. Our real estate website provides a
+        Karkala, <Link href="/property-for-sale-in-udupi">Udupi</Link>, or <Link href="/property-for-sale-in-mangalore">Mangalore</Link>. Our real estate website provides a
         hand-picked selection of property that are catered to your interests and
         requirements.
         </div>

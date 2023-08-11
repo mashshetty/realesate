@@ -61,7 +61,7 @@ function Sites(props) {
        Find {sites?.length} + Land / House / Site for sale in Karkala, Udupi and Mangalore at unbeatable price !!.
       </h1>
 
-      <h3 className={Styles.details}>Welcome to our premier real estate website, where your dream property awaits in the charming towns of Karkala, Udupi, and Mangalore for sale. </h3>
+      <h3 className={Styles.details}>Welcome to our premier real estate website, where your dream property awaits in the charming towns of Karkala,<Link href="/property-for-sale-in-udupi"> Udupi</Link>, and <Link href="/property-for-sale-in-mangalore"> Mangalore</Link> for sale. </h3>
 
       <div className={Styles.searchbox}>
         <input
