@@ -199,7 +199,7 @@ const DynamicPage = ({ data, sites }) => {
                       for sale in {site.area}, {site.thaluk}, {site.state}
                     </div>
                     <div>
-                      Plot Area : <strong> {site.sqft} </strong> sqft
+                      Plot Area : <strong> {site.sqft} </strong>
                     </div>
                   </div>
                 </div>
