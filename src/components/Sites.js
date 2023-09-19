@@ -173,7 +173,7 @@ function Sites(props) {
                 
                 <div className={Styles.contactholder}>
        <div  className={Styles.contactbox}><a  href={`tel:${site.contact}`}> <span className={Styles.contact}>Call <AddIcCallIcon className={Styles.callicn} fontSize="small"/> </span> </a></div> 
-       <div className={Styles.contactboxx} ><a  href="https://wa.me/+919741104490"> <span className={Styles.contactx}>whatsapp <WhatsAppIcon className={Styles.callicnx} fontSize="small"/> </span> </a></div> 
+       <div className={Styles.contactboxx} ><a  href="https://wa.me/+919611457603"> <span className={Styles.contactx}>whatsapp <WhatsAppIcon className={Styles.callicnx} fontSize="small"/> </span> </a></div> 
       </div>
       
               </div>
