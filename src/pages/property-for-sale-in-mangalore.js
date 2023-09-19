@@ -126,7 +126,7 @@ const Mangalore = ({ data, sites }) => {
                   </a>
                 </div>
                 <div className={Stylesite.contactboxx}>
-                  <a href="https://wa.me/+919741104490">
+                  <a href="https://wa.me/+919611457603">
                     {" "}
                     <span className={Stylesite.contactx}>
                       whatsapp{" "}
