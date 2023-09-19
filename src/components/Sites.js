@@ -159,7 +159,7 @@ function Sites(props) {
                       for sale in {site.area}, {site.thaluk}, {site.state}
                     </div>
                     <div>
-                      Plot Area : <strong> {site.sqft} </strong> sqft
+                      Plot Area : <strong> {site.sqft} </strong>
                       
                     </div>
 
